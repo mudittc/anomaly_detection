@@ -1,0 +1,44 @@
+{
+  "query": {
+    "ra_deg": 180.0,
+    "dec_deg": 0.0,
+    "radius_deg": 0.15
+  },
+  "fetch": {
+    "row_limit": 5000,
+    "catalogs": {
+      "optical_gaia": {
+        "catalog": "I/355/gaiadr3",
+        "enabled": true
+      },
+      "infrared_2mass": {
+        "catalog": "II/246/out",
+        "enabled": true
+      },
+      "infrared_allwise": {
+        "catalog": "II/328/allwise",
+        "enabled": true
+      },
+      "radio_nvss": {
+        "catalog": "VIII/65/nvss",
+        "enabled": true
+      },
+      "xray_rosat": {
+        "catalog": "J/ApJS/186/1/1rxs",
+        "enabled": false
+      }
+    }
+  },
+  "model": {
+    "random_state": 42,
+    "n_estimators": 300,
+    "contamination": 0.02,
+    "minimum_group_size": 20,
+    "robust_z_threshold": 4.0,
+    "candidate_top_fraction": 0.02
+  },
+  "matching": {
+    "max_separation_arcsec": 5.0,
+    "simultaneity_window_days": 1.0
+  }
+}
